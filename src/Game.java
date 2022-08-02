@@ -39,13 +39,8 @@
             int thisFinalScore = getFinalScore();
             int otherFinalScore = g.getFinalScore();
 
-            if (thisFinalScore > otherFinalScore){
-                return 1;
-            }else if(thisFinalScore < otherFinalScore){
-                return -1;
-            }else {
-                return 0;
-            }
+            return thisFinalScore - otherFinalScore;
+
         }
 
     }
