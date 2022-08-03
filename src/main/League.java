@@ -1,13 +1,15 @@
-package main;
-
+/**
+ * @Autor = User.name RaimondNicusorBulai99
+ *          User.email Condivisionedatiraimond@gmail.com
+ */
 public enum League {
-    Bronze (0,9),
-    Silver(10,19),
-    Gold(20,29),
-    Platinum(30,39),
-    Diamond(40,49),
-    Champion(50,59),
-    GrandCampion(60,69);
+    BRONZE(0,9),
+    SILVER(10,19),
+    GOLD(20,29),
+    PLATINUM(30,39),
+    DIAMOND(40,49),
+    CHAMPION(50,59),
+    GRANDCHAMPION(60,69);
 
     final int minScore;
     final int maxScore;
