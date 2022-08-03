@@ -1,4 +1,4 @@
-
+import java.util.Random;
 
 public enum League {
     BRONZE (0,9),
@@ -36,7 +36,11 @@ public enum League {
     public int getMaxScore() {
         return maxScore;
     }
+    /*public static League[] getRandomLeague(){
+        Random r=new Random();
+        r.nextInt(values().length);
+        return values();
 
-
+    }*/
 
 }

@@ -13,8 +13,6 @@ public class Player implements Comparable<Player>{
     private List<Game> playedGame;
     private League league;
 
-    private Game g;
-
     public Player(String name, List<Game> playedGame, League league) {
 
         this.name = name;
@@ -26,7 +24,7 @@ public class Player implements Comparable<Player>{
 
     public int getAverageScore(){
 
-        return g.getScore()/playedGame.size();
+        return playedGame.size()/playedGame.size();
     }
 
 
@@ -64,7 +62,6 @@ public class Player implements Comparable<Player>{
         return "-----------Player---------------------" +"\n"+
                 "Name: " + name + "\n" +
                 "PlayedGame: "+"\n" + playedGame +"\n"+
-                "League: " + league + "\n"+
-                "G:" + g;
+                "League: " + league + "\n";
     }
 }
