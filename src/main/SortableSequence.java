@@ -1,3 +1,5 @@
+package main;
+
 public interface SortableSequence <T extends Comparable> {
 
     void sort();

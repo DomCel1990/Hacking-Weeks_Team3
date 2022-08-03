@@ -1,3 +1,5 @@
+package main;
+
 public enum League {
     Bronze (0,9),
     Silver(10,19),
