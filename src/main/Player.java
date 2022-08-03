@@ -1,8 +1,8 @@
-/*5. Implementare una classe Player che rappresenta un giocatore. Ogni giocatore ha un nome,
+package main;/*5. Implementare una classe main.Player che rappresenta un giocatore. Ogni giocatore ha un nome,
         una lista di partite giocate ed una lega di appartenenza.
-        La classe Player deve fornire anche un metodo getAverageScore() che ritorna il punteggio
+        La classe main.Player deve fornire anche un metodo getAverageScore() che ritorna il punteggio
         medio ottenuto nelle sue partite.
-        Questa classe deve implementare Comparable. Un oggetto Player ha un valore maggiore di un
+        Questa classe deve implementare Comparable. Un oggetto main.Player ha un valore maggiore di un
         altro se il suo punteggio medio è maggiore di quello dell'oggetto con cui lo si confronta.*/
 
 import java.util.List;
