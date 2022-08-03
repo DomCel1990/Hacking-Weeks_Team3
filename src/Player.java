@@ -58,4 +58,13 @@ public class Player implements Comparable<Player>{
     public int compareTo(Player o) {
         return o.getAverageScore() - o.getAverageScore();
     }
+
+    @Override
+    public String toString() {
+        return "-----------Player---------------------" +"\n"+
+                "Name: " + name + "\n" +
+                "PlayedGame: "+"\n" + playedGame +"\n"+
+                "League: " + league + "\n"+
+                "G:" + g;
+    }
 }

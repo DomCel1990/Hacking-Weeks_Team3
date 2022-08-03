@@ -1,5 +1,7 @@
+
+
 public enum League {
-    Bronze (0,9),
+    BRONZE (0,9),
     Silver(10,19),
     Gold(20,29),
     Platinum(30,39),
@@ -7,8 +9,8 @@ public enum League {
     Chamiopn(50,59),
     GrandCampion(60,69);
 
-    final int minScore;
-    final int maxScore;
+    private final int minScore;
+    private final int maxScore;
 
     League(int minScore, int maxScore) {
         this.minScore = minScore;
@@ -16,15 +18,25 @@ public enum League {
     }
 
     public boolean isPromotable(Player p){
-        if (p.getScore > maxScore) {
+        if (p.getAverageScore()> getMaxScore()) {
             return true;
         }else return false;
     }
 
    public boolean isDemotable(Player p){
-        if (p.getScore < minScore){
+        if (p.getAverageScore() < getMinScore()){
             return true;
         }else return false;
    }
+
+    public int getMinScore() {
+        return minScore;
+    }
+
+    public int getMaxScore() {
+        return maxScore;
+    }
+
+
 
 }
