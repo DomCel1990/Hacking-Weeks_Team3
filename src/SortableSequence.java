@@ -1,4 +1,4 @@
-public interface SortableSequence <T> {
+public interface SortableSequence <T extends Comparable> {
 
     void sort();
 
