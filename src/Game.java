@@ -36,10 +36,9 @@ public class Game implements Comparable<Game> {
     // CompareTo methods for compare the final score
     @Override
     public int compareTo(Game g) {
-        int thisFinalScore = getFinalScore();
-        int otherFinalScore = g.getFinalScore();
 
-        return thisFinalScore - otherFinalScore;
+
+        return 0;
     }
     @Override
     public String toString() {

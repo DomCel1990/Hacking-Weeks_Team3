@@ -1,13 +1,9 @@
 import java.util.Random;
 
 public enum League {
-    BRONZE (0,9),
-    Silver(10,19),
-    Gold(20,29),
-    Platinum(30,39),
-    Diamond(40,49),
-    Chamiopn(50,59),
-    GrandCampion(60,69);
+    BRONZE(0, 9),
+    SILVER(10, 19),
+    GOLD(20, 29);
 
     private final int minScore;
     private final int maxScore;
@@ -17,17 +13,18 @@ public enum League {
         this.maxScore = maxScore;
     }
 
-    public boolean isPromotable(Player p){
-        if (p.getAverageScore()> getMaxScore()) {
+    public static boolean isPromotable(Player p) {
+        if (p.getAverageScore() > p.getLeague().maxScore) {
             return true;
-        }else return false;
+        } else
+            return false;
     }
 
-   public boolean isDemotable(Player p){
-        if (p.getAverageScore() < getMinScore()){
+    public static boolean isDemotable(Player p) {
+        if (p.getAverageScore() < p.getLeague().minScore) {
             return true;
-        }else return false;
-   }
+        } else return false;
+    }
 
     public int getMinScore() {
         return minScore;
@@ -36,11 +33,18 @@ public enum League {
     public int getMaxScore() {
         return maxScore;
     }
-    /*public static League[] getRandomLeague(){
-        Random r=new Random();
-        r.nextInt(values().length);
-        return values();
 
-    }*/
+    public static League getRandomLeague() {
+        Random r = new Random();
+        return values()[r.nextInt(values().length)];
+    }
 
+    static void changeLeague(Player p) {
+        for (League league : League.values()) {
+            if (!League.isPromotable(p) && !League.isDemotable(p)) {
+                p.setLeague(league);
+                break;
+            }
+        }
+    }
 }
