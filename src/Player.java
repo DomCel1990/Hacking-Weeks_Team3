@@ -19,8 +19,11 @@ public class Player implements Comparable<Player>{
         this.league = league;
     }
     public double getAverageScore(){
-
-        return 40/playedGame.size();
+        double sum = 0;
+        for(int i = 0; i<playedGame.size();i++){
+            sum += playedGame.get(i).getScore();
+        }
+        return sum/playedGame.size();
     }
     public String getName() {
         return name;

@@ -9,7 +9,7 @@ public class Start {
         List<Player> players = new ArrayList<>();
         Random r = new Random();
         //initializes 100 players
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 100; i++) {
             List<Game> games = new ArrayList<>();
             //I create a random class of games from 1 to 10
             for (int j = 0; j < r.nextInt(1, 10); j++) {
@@ -53,12 +53,12 @@ public class Start {
                 }
                 case SILVER -> {
                     silverArray.set(silverAdded, p);
-                    bronzeAdded++;
+                    silverAdded++;
                     break;
                 }
                 case GOLD -> {
-                    bronzeArray.set(goldAdded, p);
-                    bronzeAdded++;
+                    goldArray.set(goldAdded, p);
+                    goldAdded++;
                     break;
                 }
             }

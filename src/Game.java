@@ -2,7 +2,7 @@
  * @author Emilio Fagiani
  */
 // A class Game that implements Comparable
-public class Game implements Comparable<Game> {
+public class Game implements Comparable<Player> {
 
     private int enemies;
     private int score;
@@ -35,10 +35,12 @@ public class Game implements Comparable<Game> {
 
     // CompareTo methods for compare the final score
     @Override
-    public int compareTo(Game g) {
+    public int compareTo(Player o) {
+        int thisAverageScore = (int) o.getAverageScore();
+        int otherAverageScore = (int) o.getAverageScore();
+        return  thisAverageScore - otherAverageScore;
 
 
-        return 0;
     }
     @Override
     public String toString() {
