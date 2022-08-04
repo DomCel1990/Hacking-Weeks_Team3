@@ -27,13 +27,13 @@ public class SortableArray<T extends Comparable> implements SortableSequence {
 
 
 
-    /*public void remove(int i) {
+    public void remove(int i) {
         //reset the last element to null
         //to move it to the last index
         element[i]=null;
         //decrease the size of the array to remove last element
         newSize=element.length-1;
-    }*/
+    }
 
 
     @Override
