@@ -6,6 +6,9 @@ import java.util.Random;
  * User.Email Condivisionedatiraimond@gmail.com
  * Enumeration for Name Player.
  */
+/**
+* SuppressWarnings :method for ignoring dictionary errors
+*/
 @SuppressWarnings("SpellCheckingInspection")
 public enum NamePlayerEnum {
     AALINA,
@@ -933,10 +936,14 @@ public enum NamePlayerEnum {
     ZOIA,
     ZULEJKA;
 
-
+    /**
+    *Costructor
+    */
    NamePlayerEnum() {
     }
-
+    /**
+   *Random metod for name
+    */
     public static NamePlayerEnum getRandomNomePlayerEnum(){
         Random r = new Random();
         return values()[r.nextInt(values().length)];
