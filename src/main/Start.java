@@ -19,7 +19,7 @@ public class Start {
                 Game g = new Game(r.nextInt(1, 10), r.nextInt(1, 50));
                 games.add(g);
             }
-            Player p = new Player("Player" + (i + 1), games, League.getRandomLeague());
+            Player p = new Player(NamePlayerEnum.getRandomNomePlayerEnum(), games, LeagueEnum.getRandomLeague());
             players.add(p);
         }
         int bronzeSize = 0;
