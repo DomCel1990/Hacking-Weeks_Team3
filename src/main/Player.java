@@ -9,11 +9,11 @@ import java.util.List;
 
 public class Player implements Comparable<Player>{
 
-    private String name;
+    private NamePlayerEnum name;
     private List<Game> playedGame;
     private League league;
 
-    public Player(String name, List<Game> playedGame, League league) {
+    public Player(NamePlayerEnum name, List<Game> playedGame, League league) {
         this.name = name;
         this.playedGame = playedGame;
         this.league = league;
@@ -25,10 +25,10 @@ public class Player implements Comparable<Player>{
         }
         return sum/playedGame.size();
     }
-    public String getName() {
+    public NamePlayerEnum getName() {
         return name;
     }
-    public void setName(String name) {
+    public void setName(NamePlayerEnum name) {
         this.name = name;
     }
     public List<Game> getPlayedGame() {
