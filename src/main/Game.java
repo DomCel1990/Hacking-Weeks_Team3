@@ -1,9 +1,7 @@
-package main;
-
-/**
+    /**
      * @author Emilio Fagiani
      */
-    // A class main.Game that implements Comparable
+    // A class Game that implements Comparable
     public class Game implements Comparable<Game> {
 
         private int enemies;
