@@ -1,10 +1,9 @@
 package main;
 
-public interface SortableSequence <T extends Comparable> {
+public interface SortableSequence <T> {
 
-    void sort();
+    void sort(T[] array);
 
-
-    boolean isSorted();
+    boolean isSorted(T[] array);
 }
 
