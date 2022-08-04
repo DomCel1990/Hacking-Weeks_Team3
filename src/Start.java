@@ -18,7 +18,6 @@ public class Start {
             }
             Player p = new Player("Player" + (i + 1), games, League.getRandomLeague());
             players.add(p);
-          System.out.println(p);
         }
         int bronzeSize = 0;
         int silverSize = 0;
@@ -66,7 +65,6 @@ public class Start {
         bronzeArray.sort();
         silverArray.sort();
         goldArray.sort();
-
     }
 }
 
