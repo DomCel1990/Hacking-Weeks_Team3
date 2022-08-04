@@ -14,47 +14,42 @@ public class Player implements Comparable<Player>{
     private League league;
 
     public Player(String name, List<Game> playedGame, League league) {
-
         this.name = name;
         this.playedGame = playedGame;
         this.league = league;
     }
-
-
-
-    public int getAverageScore(){
-
-        return playedGame.size()/playedGame.size();
+    public double getAverageScore(){
+        double sum = 0;
+        for(int i = 0; i<playedGame.size();i++){
+            sum += playedGame.get(i).getScore();
+        }
+        return sum/playedGame.size();
     }
-
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public List<Game> getPlayedGame() {
         return playedGame;
     }
-
     public void setPlayedGame(List<Game> playedGame) {
         playedGame = playedGame;
     }
-
     public League getLeague() {
         return league;
     }
-
     public void setLeague(League league) {
         this.league = league;
     }
 
     @Override
-    public int compareTo(Player o) {
-        return o.getAverageScore() - o.getAverageScore();
+    public int  compareTo(Player o) {
+        int thisAverageScore = (int) getAverageScore();
+        int otherAverageScore = (int) o.getAverageScore();
+        return  thisAverageScore - otherAverageScore;
+
     }
 
     @Override

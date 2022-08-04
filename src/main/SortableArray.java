@@ -35,9 +35,7 @@ public class SortableArray<T extends Comparable> implements SortableSequence {
                     element[i + 1] = k;
                 }
         }
-
     }
-
     @Override
     public boolean isSorted() {
         for (int i = 0; i < element.length; i++) {
